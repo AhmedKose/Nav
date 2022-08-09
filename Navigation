@@ -1,0 +1,32 @@
+package Nav;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
+public class Navigation {
+
+        public static void main(String[] args) {
+        
+                System.setProperty("webdriver.chrome.driver", "C:\\Chrome-Driver\\chromedriver.exe");
+		
+		            ChromeDriver driver = new ChromeDriver();
+                
+                driver.get("http://www.google.com");
+		
+		            driver.navigate().to("http://the-internet.herokuapp.com/");
+                
+                Driver.findElement(By.xpath(//a[@href = "/add_remove_elements/"])).click();
+                
+                Driver.findElement(By.xpath(//a[@href = "addElement()"])).click();
+                
+                WebElement element = driver.findElement(By.id("elements"));
+                
+                if(element != null) {
+	                  System.out.println("Element found by ID");
+                    
+                    }
+   }
+}
